@@ -1,5 +1,6 @@
 package com.glqdlt.ex.randomgacha;
 
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -15,5 +16,10 @@ public class Gamble {
         int ran = ThreadLocalRandom.current().nextInt(1, bound + 1);
         System.out.println(String.format("random numb :  %s", ran));
         return ran <= per;
+    }
+
+    public boolean gachaMath(double per) {
+        double ran = Math.random();
+        return ran < per;
     }
 }
